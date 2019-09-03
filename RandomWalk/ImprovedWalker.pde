@@ -7,9 +7,9 @@ class ImprovedWalker{
     posX = width/2;
    }
   void display(){
-    fill(0);
+    fill(255);
     stroke(255,0,0);
-    point(posX ,posY);
+    circle(posX ,posY,8);
   }  
   void step(){
     int r = (int)random(9);

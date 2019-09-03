@@ -4,12 +4,12 @@ class walker{
  
    walker(){
     posY = height/2;
-    posX = width/2;
+    posX = width/2;  
    }
   void display(){
-    fill(0);
+    fill(255);
     stroke(0);
-    point(posX ,posY);
+    circle(posX ,posY,8);
   }
   
   void step(){
