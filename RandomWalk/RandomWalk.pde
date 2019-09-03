@@ -1,16 +1,26 @@
-walker myWalk;
-ImprovedWalker myWalk1;
+walker[] walkers;
+ImprovedWalker[] IWalkers;
 void setup(){
-  background(255);
+  
   size(400,400);
-  myWalk = new walker();
-  myWalk1 = new ImprovedWalker();
+  walkers = new walker[10];
+  for (int i = 0;i<walkers.length;i++){
+    walkers[i] = new walker((color)random(200),random(width),random(height));
+  }
+    walkers = new walker[10];
+  for (int i = 0;i<IWalkers.length;i++){
+    IWalkers[i] = new ImprovedWalker(random(255),random(255),random(255),random(width),random(height));
+  }
 }
 
 void draw(){
-  myWalk.display();
-  myWalk.step();
-  
-  myWalk1.display();
-  myWalk1.step();
+  background(255);
+    for (int i = 0;i<walkers.length;i++){
+    walkers[i].display();
+    walkers[i].step();
+  }
+    for (int i = 0;i<IWalkers.length;i++){
+      IWalkers[i].display();
+      IWalkers[i].step();
+  }
 }

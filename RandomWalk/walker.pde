@@ -1,13 +1,20 @@
 class walker{
  float posX;
  float posY;
- 
+ color c;
    walker(){
+    float r = random(255);
+    c = color(r);
     posY = height/2;
     posX = width/2;  
    }
+   walker(color c, float posX, float posY){
+     this.c = c;
+     this.posY = posY;
+     this.posX = posX;
+   }
   void display(){
-    fill(255);
+    fill(c);
     stroke(0);
     circle(posX ,posY,8);
   }
