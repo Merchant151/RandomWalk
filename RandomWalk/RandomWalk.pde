@@ -9,10 +9,10 @@ void setup(){
   }
     walkers = new walker[10];
   for (int i = 0;i<IWalkers.length;i++){
-    IWalkers[i] = new ImprovedWalker(random(255),random(255),random(255),random(width),random(height));
+    IWalkers[i] = new ImprovedWalker(random(255),random(255),
+    random(255),random(width),random(height));
   }
 }
-
 void draw(){
   background(255);
     for (int i = 0;i<walkers.length;i++){
